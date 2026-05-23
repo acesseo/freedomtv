@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreedomTV | Entretenimento Premium</title>
-    <!-- Fontes e Ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -35,7 +34,7 @@
         }
 
         .logo img { 
-            height: 140px; /* Logo ainda maior conforme solicitado */
+            height: 140px; 
             width: auto; 
             filter: drop-shadow(0 0 10px rgba(254, 11, 19, 0.3));
         }
@@ -117,6 +116,7 @@
             transition: 0.4s;
             box-shadow: 0 0 30px rgba(254, 11, 19, 0.6);
             animation: pulse-glow 2s infinite ease-in-out;
+            display: inline-block;
         }
 
         @keyframes pulse-glow {
@@ -153,6 +153,38 @@
             font-size: 0.8rem;
             opacity: 0.5;
         }
+
+        /* AJUSTES ESPECÍFICOS PARA MOBILE (NOVO) */
+        @media (max-width: 480px) {
+            header {
+                padding: 25px 5%;
+            }
+            .logo img {
+                height: 100px; /* Logo reduzida para não ocupar a tela toda do celular */
+            }
+            .container {
+                padding: 30px 5%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr); /* Força 2 colunas no celular para caber melhor */
+                gap: 10px;
+            }
+            .btn-main {
+                padding: 20px 25px; /* Botão mais firme para telas estreitas */
+                width: 90%; /* Quase a largura total no mobile */
+                font-size: 1rem;
+            }
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 30px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -171,7 +203,6 @@
             <strong>Experimente grátis agora mesmo!</strong>
         </p>
 
-        <!-- Grade de Vantagens -->
         <div class="features-grid">
             <div class="feature-item">
                 <i class="fas fa-futbol"></i>
@@ -191,13 +222,11 @@
             </div>
         </div>
         
-        <!-- Botão Central - Agora enviando a palavra 'avaliar' -->
         <a href="https://api.whatsapp.com/send?phone=5531997760051&text=avaliar" class="btn-main">
             Solicitar um Teste Grátis
         </a>
     </div>
 
-    <!-- Ícone WhatsApp Flutuante -->
     <a href="https://api.whatsapp.com/send?phone=5531997760051&text=Olá! Gostaria de mais informações sobre a FreedomTV." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
