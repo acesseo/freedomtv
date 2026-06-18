@@ -7,6 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <!-- ⚠️ ADICIONE SEU GOOGLE ADS AQUI (TAG GLOBAL) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-SEU_ID_AQUI"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Ativa a configuração global do Google Ads no site
+      gtag('config', 'AW-SEU_ID_AQUI');
+    </script>
+    
     <style>
         :root {
             --primary-red: #FE0B13;
@@ -42,7 +53,7 @@
 
         .container {
             width: 100%;
-            max-width: 900px;
+            max-width: 950px;
             padding: 20px;
             flex: 1;
         }
@@ -94,7 +105,7 @@
         .grid-options {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 30px;
         }
 
@@ -103,7 +114,7 @@
             background: var(--card-bg);
             border: 1px solid rgba(254, 11, 19, 0.2);
             border-radius: 15px;
-            padding: 30px 20px;
+            padding: 25px 15px;
             cursor: pointer;
             transition: 0.3s;
             display: flex;
@@ -120,20 +131,28 @@
         }
 
         .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--primary-red);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            line-height: 1.3;
         }
 
         .card .price {
             font-size: 1.8rem;
             font-weight: 900;
+            color: var(--primary-red);
+            margin-top: 10px;
         }
 
         .card i {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
-            color: var(--white);
+            color: var(--primary-red);
         }
 
         /* Instruções de Instalação */
@@ -152,13 +171,25 @@
             margin-bottom: 20px;
         }
 
+        .instructions-box strong.app-name {
+            color: var(--primary-red);
+            font-size: 1.4rem;
+            display: inline-block;
+            background: rgba(254, 11, 19, 0.1);
+            padding: 2px 10px;
+            border-radius: 5px;
+            border: 1px solid rgba(254, 11, 19, 0.2);
+            margin: 0 5px;
+        }
+
         .instructions-box img {
-            max-height: 100px;
+            max-height: 140px;
             max-width: 100%;
             margin: 20px 0;
             border-radius: 10px;
-            background: #fff; /* Fundo branco para logos ficarem visíveis */
+            background: #fff;
             padding: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .highlight-code {
@@ -212,7 +243,7 @@
             100% { transform: scale(1); }
         }
 
-        /* WhatsApp Flutuante */
+        /* WhatsApp Flutuante com Gatilho de Conversão */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -247,31 +278,31 @@
 
     <div class="container">
         
-        <!-- PASSO 0: CAPA INFORMATIVA (Segura para Google Ads) -->
+        <!-- PASSO 0: CAPA INFORMATIVA COMPLETA -->
         <div id="step-0" class="step active">
             <h1 class="hero-title">Sua Central de Entretenimento Completa</h1>
-            <p class="hero-subtitle">Assista aos melhores conteúdos digitais com máxima estabilidade e ultra definição diretamente na sua tela.</p>
+            <p class="hero-subtitle">Filmes, Séries, Doramas e Esportes Ao Vivo com máxima estabilidade, ultra definição e sem travamentos.</p>
             
             <div class="grid-options">
                 <div class="card" style="cursor: default;">
                     <i class="fas fa-film"></i>
                     <h3>Filmes e Séries</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 5px;">Milhares de títulos atualizados semanais.</p>
+                    <p>Milhares de títulos atualizados semanalmente.</p>
                 </div>
                 <div class="card" style="cursor: default;">
                     <i class="fas fa-futbol"></i>
-                    <h3>Esportes Ao Vivo</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 5px;">Acompanhe todas as rodadas sem travamentos.</p>
+                    <h3>Futebol Ao Vivo</h3>
+                    <p>Acompanhe todas as rodadas sem interrupções.</p>
                 </div>
                 <div class="card" style="cursor: default;">
                     <i class="fas fa-heart"></i>
                     <h3>Doramas</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 5px;">As produções asiáticas mais procuradas do momento.</p>
+                    <p>As produções asiáticas mais consagradas.</p>
                 </div>
                 <div class="card" style="cursor: default;">
                     <i class="fas fa-bolt"></i>
-                    <h3>Alta Performance</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 5px;">Tecnologia de ponta otimizada para conexões modernas.</p>
+                    <h3>Alta Estabilidade</h3>
+                    <p>Otimizado para conexões modernas.</p>
                 </div>
             </div>
             
@@ -302,6 +333,7 @@
             <button class="btn btn-back" onclick="goToStep(0)">Voltar</button>
         </div>
 
+        <!-- PASSO 2: DISPOSITIVO -->
         <div id="step-2" class="step">
             <h2>Onde você vai assistir?</h2>
             <div class="grid-options" style="max-width: 500px; margin: 0 auto;">
@@ -317,51 +349,60 @@
             <button class="btn btn-back" onclick="goToStep(1)">Voltar</button>
         </div>
 
+        <!-- PASSO 3: SISTEMA OPERACIONAL -->
         <div id="step-3" class="step">
             <h2>Selecione o Sistema da sua TV</h2>
             <div class="grid-options">
+                <div class="card" onclick="showInstructions('maxplayer')">
+                    <i class="fas fa-tv"></i>
+                    <h3>Sistema webOS</h3>
+                    <p>Para Smart TVs da marca LG</p>
+                </div>
                 <div class="card" onclick="showInstructions('android')">
                     <i class="fab fa-android"></i>
-                    <h3>Android TV</h3>
+                    <h3>Sistema Android</h3>
+                    <p>TV Box, Fire Stick, Chromecast, TCL</p>
                 </div>
                 <div class="card" onclick="showInstructions('maxplayer')">
                     <i class="fas fa-tv"></i>
-                    <h3>Samsung (Tizen)</h3>
+                    <h3>Sistema Tizen</h3>
+                    <p>Para Smart TVs da marca Samsung</p>
                 </div>
                 <div class="card" onclick="showInstructions('bobplayer')">
                     <i class="fas fa-tv"></i>
-                    <h3>Samsung (Antiga)</h3>
-                </div>
-                <div class="card" onclick="showInstructions('maxplayer')">
-                    <i class="fas fa-tv"></i>
-                    <h3>LG TV</h3>
-                </div>
-                <div class="card" onclick="showInstructions('bobplayer')">
-                    <i class="fas fa-tv"></i>
-                    <h3>Roku TV</h3>
+                    <h3>Sistema Roku</h3>
+                    <p>Smart TVs Roku, AOC, Philco, Semp</p>
                 </div>
             </div>
             <button class="btn btn-back" onclick="goToStep(2)">Voltar</button>
         </div>
 
+        <!-- PASSO 4: INSTRUÇÕES FINAIS -->
         <div id="step-4" class="step">
             <h2>Siga as Instruções</h2>
-            <div id="instruction-content" class="instructions-box">
-                </div>
+            <div id="instruction-content" class="instructions-box"></div>
             <button class="btn btn-back" onclick="goToStep(3)">Voltar</button>
         </div>
 
     </div>
 
-    <!-- O Botão flutuante agora começa e se mantém sempre com a palavra Avaliar -->
-    <a href="https://wa.me/553197760051?text=Avaliar" class="whatsapp-float" target="_blank" id="float-wpp">
+    <!-- Link fixado com rastreamento ativo -->
+    <a href="https://wa.me/553197760051?text=Avaliar" class="whatsapp-float" target="_blank" id="float-wpp" onclick="trackGoogleConversion()">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
-        // Forçado para "Avaliar" desde o início para cumprir a regra de envio direto
         let selectedPlan = "Avaliar"; 
         const wppNumber = "553197760051"; 
+
+        // ⚠️ FUNÇÃO QUE DISPARA O EVENTO PRO GOOGLE ADS SOMENTE NO CLIQUE
+        function trackGoogleConversion() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-SEU_ID_AQUI/SEU_LABEL_AQUI'
+                });
+            }
+        }
 
         function goToStep(stepNumber) {
             document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
@@ -369,9 +410,7 @@
         }
 
         function selectPlan(plan) {
-            // Mantemos a palavra fixa como solicitado para o fluxo final do WhatsApp
             selectedPlan = "Avaliar";
-            
             document.getElementById('float-wpp').href = `https://wa.me/${wppNumber}?text=${encodeURIComponent(selectedPlan)}`;
             goToStep(2);
         }
@@ -386,41 +425,41 @@
 
         function showInstructions(type) {
             const contentDiv = document.getElementById('instruction-content');
-            // Garante que o link final carregará estritamente o texto "Avaliar"
             const wppLink = `https://wa.me/${wppNumber}?text=${encodeURIComponent(selectedPlan)}`;
             let html = "";
 
+            // Botões gerados dinamicamente ganharam o atributo: onclick="trackGoogleConversion()"
             if (type === 'maxplayer') {
                 html = `
-                    <p>Acesse a <strong>Loja de Apps</strong> na sua TV e procure por <strong>Max Player</strong>.</p>
-                    <img src="https://play-lh.googleusercontent.com/bkHfLqSgTdWr0-UITDkSwYkg6SeWZcdqziNVMTilkVyfy1GxQSPLStMT3M48cfxYMfbLTzmJ2tn5Zbrto_fn=s48-rw" alt="Max Player" onerror="this.style.display='none'">
-                    <p>Após Baixar e Instalar, clique no botão abaixo.</p>
-                    <a href="${wppLink}" class="btn" target="_blank">Clique Aqui</a>
-                `;
-            } 
-            else if (type === 'bobplayer') {
-                html = `
-                    <p>Acesse a <strong>loja de sua TV</strong> e baixe o Aplicativo <strong>Bob Player</strong>.</p>
-                    <img src="https://bobplayer.com/assets/BobLogo-DMPEZ4D1.svg" alt="Bob Player Logo">
-                    <p>Após Baixar e Instalar, clique no botão abaixo.</p>
-                    <a href="${wppLink}" class="btn" target="_blank">Clique Aqui</a>
+                    <p>Acesse a <strong>Loja de Apps</strong> da sua Smart TV e pesquise por: <strong class="app-name">Max Player</strong></p>
+                    <img src="Imagens/foto1.png" alt="Player">
+                    <p>Após Baixar e Instalar o aplicativo na sua TV, clique no botão abaixo para concluir a liberação.</p>
+                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Avaliar</a>
                 `;
             } 
             else if (type === 'android') {
                 html = `
-                    <p>Acesse a loja de sua TV e baixe o App <strong>Downloader</strong>.</p>
-                    <img src="https://play-lh.googleusercontent.com/_zuxP30plNbEBOOre6Q4rVwGQslOX6NCsefA8tPxJFsFt2XLO35yK2YVaPqmFl0oGVnO9FZCJ6b2lhrSk3a0KA=w240-h480-rw" alt="Downloader" onerror="this.style.display='none'">
-                    <p>Depois que baixar, vai abrir o app e digitar o seguinte código:</p>
+                    <p>Acesse a loja de aplicativos do seu sistema e pesquise por: <strong class="app-name">Downloader</strong></p>
+                    <img src="Imagens/Foto2.png" alt="Transfer App">
+                    <p>Ao abrir o aplicativo instalado na tela, digite o seguinte código numérico de pareamento:</p>
                     <span class="highlight-code">5354565</span>
-                    <p>Vai abrir uma tela pra instalar o nosso app Oficial da FreedomTV, é só instalar seguindo os passos.</p>
-                    <a href="${wppLink}" class="btn" target="_blank">Concluir</a>
+                    <p>O instalador oficial será carregado. Prossiga com a instalação e clique abaixo para concluir.</p>
+                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Avaliar</a>
                 `;
             }
+            else if (type === 'bobplayer') {
+                html = `
+                    <p>Acesse a <strong>loja de aplicativos</strong> da sua TV e pesquise por: <strong class="app-name">Bob Player</strong></p>
+                    <img src="Imagens/foto3.png" alt="Player Logo">
+                    <p>Após Baixar e Instalar o aplicativo na sua TV, clique no botão abaixo para concluir a liberação.</p>
+                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Avaliar</a>
+                `;
+            } 
             else if (type === 'celular') {
                 html = `
-                    <p>Para assistir no celular o processo é rápido e automático!</p>
-                    <p>Clique no botão abaixo para receber o seu acesso pelo nosso atendimento.</p>
-                    <a href="${wppLink}" class="btn" target="_blank">Liberar Acesso</a>
+                    <p>Para assistir diretamente no seu smartphone, o processo de configuração é imediato!</p>
+                    <p>Clique no botão abaixo para gerar suas credenciais temporárias de acesso com o nosso suporte.</p>
+                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Avaliar</a>
                 `;
             }
 
