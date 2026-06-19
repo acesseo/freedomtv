@@ -7,15 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- ⚠️ ADICIONE SEU GOOGLE ADS AQUI (TAG GLOBAL) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-SEU_ID_AQUI"></script>
+    <!-- TAG GLOBAL DO GOOGLE ADS INSTALADA -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18056803055"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       // Ativa a configuração global do Google Ads no site
-      gtag('config', 'AW-SEU_ID_AQUI');
+      gtag('config', 'AW-18056803055');
     </script>
     
     <style>
@@ -395,11 +395,11 @@
         let selectedPlan = "Avaliar"; 
         const wppNumber = "553197760051"; 
 
-        // ⚠️ FUNÇÃO QUE DISPARA O EVENTO PRO GOOGLE ADS SOMENTE NO CLIQUE
+        // FUNÇÃO QUE DISPARA O EVENTO PRO GOOGLE ADS COM AS SUAS CREDENCIAIS REAIS
         function trackGoogleConversion() {
             if (typeof gtag === 'function') {
                 gtag('event', 'conversion', {
-                    'send_to': 'AW-SEU_ID_AQUI/SEU_LABEL_AQUI'
+                    'send_to': 'AW-18056803055/ceNhCIGr3sEcEO_lk6JD'
                 });
             }
         }
@@ -428,7 +428,6 @@
             const wppLink = `https://wa.me/${wppNumber}?text=${encodeURIComponent(selectedPlan)}`;
             let html = "";
 
-            // Botões gerados dinamicamente ganharam o atributo: onclick="trackGoogleConversion()"
             if (type === 'maxplayer') {
                 html = `
                     <p>Acesse a <strong>Loja de Apps</strong> da sua Smart TV e pesquise por: <strong class="app-name">Max Player</strong></p>
