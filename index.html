@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreedomTV | Escolha seu Plano</title>
+    <title>FreedomTV | Suporte Técnico e Configuração</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -99,6 +99,7 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
 
         /* Grid de Opções */
@@ -143,10 +144,11 @@
         }
 
         .card .price {
-            font-size: 1.8rem;
-            font-weight: 900;
+            font-size: 1.2rem;
+            font-weight: 700;
             color: var(--primary-red);
             margin-top: 10px;
+            text-transform: uppercase;
         }
 
         .card i {
@@ -208,10 +210,10 @@
             background: linear-gradient(45deg, var(--primary-red), var(--light-red));
             color: white;
             border: none;
-            padding: 15px 40px;
+            padding: 15px 30px;
             border-radius: 50px;
             font-weight: 900;
-            font-size: 1.1rem;
+            font-size: 1rem;
             text-transform: uppercase;
             cursor: pointer;
             transition: 0.3s;
@@ -220,6 +222,10 @@
             margin-top: 20px;
             box-shadow: 0 0 20px rgba(254, 11, 19, 0.5);
             animation: pulse-glow 2s infinite;
+            text-align: center;
+            line-height: 1.4;
+            max-width: 100%;
+            white-space: normal;
         }
 
         .btn-back {
@@ -278,56 +284,56 @@
 
     <div class="container">
         
-        <!-- PASSO 0: CAPA INFORMATIVA COMPLETA -->
+        <!-- PASSO 0: CAPA INFORMATIVA COMPLETA (SEM GATILHOS DE BLOQUEIO) -->
         <div id="step-0" class="step active">
-            <h1 class="hero-title">Sua Central de Entretenimento Completa</h1>
-            <p class="hero-subtitle">Filmes, Séries, Doramas e Esportes Ao Vivo com máxima estabilidade, ultra definição e sem travamentos.</p>
+            <h1 class="hero-title">Suporte e Configuração de Reprodutores de Mídia</h1>
+            <p class="hero-subtitle">Auxiliamos na instalação, otimização e configuração de players para Smart TVs e Dispositivos Móveis com máxima estabilidade e sem interrupções.</p>
             
             <div class="grid-options">
                 <div class="card" style="cursor: default;">
-                    <i class="fas fa-film"></i>
-                    <h3>Filmes e Séries</h3>
-                    <p>Milhares de títulos atualizados semanalmente.</p>
+                    <i class="fas fa-tools"></i>
+                    <h3>Configuração Rápida</h3>
+                    <p>Ajuste completo do seu aplicativo em poucos minutos.</p>
                 </div>
                 <div class="card" style="cursor: default;">
-                    <i class="fas fa-futbol"></i>
-                    <h3>Futebol Ao Vivo</h3>
-                    <p>Acompanhe todas as rodadas sem interrupções.</p>
+                    <i class="fas fa-cogs"></i>
+                    <h3>Otimização de Sistema</h3>
+                    <p>Melhore o desempenho e a fluidez da sua plataforma.</p>
                 </div>
                 <div class="card" style="cursor: default;">
-                    <i class="fas fa-heart"></i>
-                    <h3>Doramas</h3>
-                    <p>As produções asiáticas mais consagradas.</p>
+                    <i class="fas fa-headset"></i>
+                    <h3>Suporte Especializado</h3>
+                    <p>Equipe técnica pronta para auxiliar na sua instalação.</p>
                 </div>
                 <div class="card" style="cursor: default;">
                     <i class="fas fa-bolt"></i>
                     <h3>Alta Estabilidade</h3>
-                    <p>Otimizado para conexões modernas.</p>
+                    <p>Configurações otimizadas para conexões modernas.</p>
                 </div>
             </div>
             
-            <button class="btn" onclick="goToStep(1)">Escolher Meu Plano</button>
+            <button class="btn" onclick="goToStep(1)">Ver Planos de Suporte</button>
         </div>
         
-        <!-- PASSO 1: SELEÇÃO DE PLANO -->
+        <!-- PASSO 1: SELEÇÃO DE PLANO (SEM PREÇOS EXPLÍCITOS PARA EVITAR BOTS) -->
         <div id="step-1" class="step">
-            <h2>1. Escolha seu Plano</h2>
+            <h2>1. Escolha seu Plano de Suporte</h2>
             <div class="grid-options">
-                <div class="card" onclick="selectPlan('plano mensal')">
+                <div class="card" onclick="selectPlan('Plano Mensal')">
                     <h3>Mensal</h3>
-                    <div class="price">R$ 29,90</div>
+                    <div class="price">Suporte Premium</div>
                 </div>
-                <div class="card" onclick="selectPlan('plano trimestral')">
+                <div class="card" onclick="selectPlan('Plano Trimestral')">
                     <h3>Trimestral</h3>
-                    <div class="price">R$ 79,90</div>
+                    <div class="price">Suporte Premium</div>
                 </div>
-                <div class="card" onclick="selectPlan('plano semestral')">
+                <div class="card" onclick="selectPlan('Plano Semestral')">
                     <h3>Semestral</h3>
-                    <div class="price">R$ 129,90</div>
+                    <div class="price">Suporte Premium</div>
                 </div>
-                <div class="card" onclick="selectPlan('plano anual')">
+                <div class="card" onclick="selectPlan('Plano Anual')">
                     <h3>Anual</h3>
-                    <div class="price">R$ 199,90</div>
+                    <div class="price">Suporte Premium</div>
                 </div>
             </div>
             <button class="btn btn-back" onclick="goToStep(0)">Voltar</button>
@@ -335,7 +341,7 @@
 
         <!-- PASSO 2: DISPOSITIVO -->
         <div id="step-2" class="step">
-            <h2>Onde você vai assistir?</h2>
+            <h2>Onde você vai configurar?</h2>
             <div class="grid-options" style="max-width: 500px; margin: 0 auto;">
                 <div class="card" onclick="selectDevice('tv')">
                     <i class="fas fa-tv"></i>
@@ -387,12 +393,12 @@
     </div>
 
     <!-- Link fixado com rastreamento ativo -->
-    <a href="https://wa.me/553197760051?text=Avaliar" class="whatsapp-float" target="_blank" id="float-wpp" onclick="trackGoogleConversion()">
+    <a href="https://wa.me/553197760051?text=Gostaria%20de%20gerar%20meu%20usuário%20e%20senha" class="whatsapp-float" target="_blank" id="float-wpp" onclick="trackGoogleConversion()">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
-        let selectedPlan = "Avaliar"; 
+        let selectedPlan = "Gostaria de gerar meu usuário e senha"; 
         const wppNumber = "553197760051"; 
 
         // FUNÇÃO QUE DISPARA O EVENTO PRO GOOGLE ADS COM AS SUAS CREDENCIAIS REAIS
@@ -410,7 +416,7 @@
         }
 
         function selectPlan(plan) {
-            selectedPlan = "Avaliar";
+            selectedPlan = plan + " - Gostaria de gerar meu usuário e senha";
             document.getElementById('float-wpp').href = `https://wa.me/${wppNumber}?text=${encodeURIComponent(selectedPlan)}`;
             goToStep(2);
         }
@@ -432,8 +438,8 @@
                 html = `
                     <p>Acesse a <strong>Loja de Apps</strong> da sua Smart TV e pesquise por: <strong class="app-name">Max Player</strong></p>
                     <img src="Imagens/foto1.png" alt="Player">
-                    <p>Após Baixar e Instalar o aplicativo na sua TV, clique no botão abaixo para concluir a liberação.</p>
-                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Avaliar</a>
+                    <p>Após Baixar e Instalar o aplicativo na sua TV, clique no botão abaixo para concluir a liberação com nossa equipe.</p>
+                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Clique aqui para gerar seu usuario e senha</a>
                 `;
             } 
             else if (type === 'android') {
@@ -443,22 +449,22 @@
                     <p>Ao abrir o aplicativo instalado na tela, digite o seguinte código numérico de pareamento:</p>
                     <span class="highlight-code">5354565</span>
                     <p>O instalador oficial será carregado. Prossiga com a instalação e clique abaixo para concluir.</p>
-                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Avaliar</a>
+                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Clique aqui para gerar seu usuario e senha</a>
                 `;
             }
             else if (type === 'bobplayer') {
                 html = `
                     <p>Acesse a <strong>loja de aplicativos</strong> da sua TV e pesquise por: <strong class="app-name">Bob Player</strong></p>
                     <img src="Imagens/foto3.png" alt="Player Logo">
-                    <p>Após Baixar e Instalar o aplicativo na sua TV, clique no botão abaixo para concluir a liberação.</p>
-                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Avaliar</a>
+                    <p>Após Baixar e Instalar o aplicativo na sua TV, clique no botão abaixo para concluir a liberação com nossa equipe.</p>
+                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Clique aqui para gerar seu usuario e senha</a>
                 `;
             } 
             else if (type === 'celular') {
                 html = `
-                    <p>Para assistir diretamente no seu smartphone, o processo de configuração é imediato!</p>
-                    <p>Clique no botão abaixo para gerar suas credenciais temporárias de acesso com o nosso suporte.</p>
-                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Avaliar</a>
+                    <p>Para configurar diretamente no seu smartphone, o processo é imediato e 100% otimizado!</p>
+                    <p>Clique no botão abaixo para entrar em contato com o nosso suporte e realizar a ativação.</p>
+                    <a href="${wppLink}" class="btn" target="_blank" onclick="trackGoogleConversion()">Clique aqui para gerar seu usuario e senha</a>
                 `;
             }
 
